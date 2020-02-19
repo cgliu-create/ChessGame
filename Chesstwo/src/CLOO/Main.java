@@ -20,6 +20,7 @@ public class Main extends JFrame {
     private int yp = 21;
     private int xs = 21;
     private int ys = 21;
+    private ArrayList<Point> pmove = new ArrayList<Point>();
     //Constructor
     public Main() {
         super("Chess");
@@ -34,14 +35,11 @@ public class Main extends JFrame {
             }
         }
         addButtons();
+        checkResizing();
     }
     //test
     public static void main(String[] args) {
         Main run = new Main();
-        while (run.play) { //game loop
-            run.checkResizing();
-
-        }
     }
     //resize frame
     public void checkResizing() {
@@ -61,37 +59,51 @@ public class Main extends JFrame {
                 grid[y][x].setSize(w, h);
                 grid[y][x].setOpaque(true);
                 grid[y][x].setBackground(Color.black);
-                grid[y][x].setIcon(new ImageIcon(this.game.getImage(y,x,w,h)));
-                int finalR = x;
-                int finalC = y;
+                grid[y][x].setIcon(new ImageIcon(game.getImage(y,x,w,h)));
+                int finalX = x;
+                int finalY = y;
                 grid[y][x].addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseReleased(MouseEvent e) {
                         boolean action = true;
                         if(yp == 21 && xp == 21){
-                            yp = finalC;
-                            xp = finalR;
+                            yp = finalY;
+                            xp = finalX;
                             System.out.println("chose piece");
                             action = false;
-                            grid[yp][xp].setBackground(Color.red);
-                            ArrayList<int[]> pmove = game.checkMoves(yp,xp);
-                            for (int[] move: pmove) {
-                                grid[move[0]][move[1]].setBackground(Color.red);
+                            Color x = Color.red;
+                            if(game.getData(yp,xp)<0)
+                                x = Color.blue;
+                            grid[yp][xp].setBackground(x);
+                            pmove = game.checkMoves(yp,xp);
+                            for (Point move: pmove) {
+                                grid[move.getY()][move.getX()].setBackground(x);
                             }
                         }
                         if(yp != 21 && xp != 21 && action){
-                            ys = finalC;
-                            xs = finalR;
-                            game.changeData(yp,xp,ys,xs);
-                            grid[yp][xp].setIcon(new ImageIcon(game.getImage(yp,xp,w,h)));
+                            ys = finalY;
+                            xs = finalX;
+                            boolean yes = false;
+                            for (Point move: pmove) {
+                                if(move.getY() == ys && move.getX() == xs)
+                                    yes = true;
+                            }
+                            if(yes) {
+                                game.changeData(yp, xp, ys, xs);
+                                grid[yp][xp].setIcon(new ImageIcon(game.getImage(yp, xp, w, h)));
+                                grid[ys][xs].setIcon(new ImageIcon(game.getImage(ys, xs, w, h)));
+                                System.out.println("chose spot");
+                            }
+                            if(!(yes)){
+                                System.out.println("Invalid move");
+                            }
                             for (JButton[] jButtons : grid) {
                                 for (JButton jButton : jButtons) {
                                     jButton.setBackground(Color.black);
                                 }
                             }
-                            grid[ys][xs].setIcon(new ImageIcon(game.getImage(ys,xs,w,h)));
-                            System.out.println("chose spot");
                             yp = xp = ys = xs = 21;
+                            checkResizing();
                             revalidate();
                         }
                     }
