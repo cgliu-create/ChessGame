@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="380cf832-949d-4f50-a238-b08c7b2af459" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Chessplus/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/Chessplus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chessplus/src/ChessP/empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1XrnFc0jHzzeheDHY6AZ7exuSAs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ChessP" />
+      <recent name="$PROJECT_DIR$/src/CLOO" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="CLOO.Main" />
+      <module name="Chess" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="380cf832-949d-4f50-a238-b08c7b2af459" name="Default Changelist" comment="" />
+      <created>1581812977152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581812977152</updated>
+    </task>
+    <task id="LOCAL-00001" summary="resizeable grid">
+      <created>1581821359823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581821359823</updated>
+    </task>
+    <task id="LOCAL-00002" summary="resizeable grid&#10;numbered and lettered">
+      <created>1581825196563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581825196563</updated>
+    </task>
+    <task id="LOCAL-00003" summary="resizeable grid&#10;numbered and lettered">
+      <created>1581825218998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581825218998</updated>
+    </task>
+    <task id="LOCAL-00004" summary="resizeable grid&#10;numbered and lettered">
+      <created>1581837465975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581837465975</updated>
+    </task>
+    <task id="LOCAL-00005" summary="resizeable grid&#10;numbered and lettered">
+      <created>1581837617777</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581837617777</updated>
+    </task>
+    <task id="LOCAL-00006" summary="resizeable grid&#10;numbered and lettered">
+      <created>1581837628332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581837628332</updated>
+    </task>
+    <task id="LOCAL-00007" summary="resizeable grid&#10;numbered and lettered&#10;image pieces">
+      <created>1581838628814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581838628814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="resizeable grid&#10;numbered and lettered&#10;image pieces&#10;can move pieces in commandline">
+      <created>1581895815609</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581895815609</updated>
+    </task>
+    <task id="LOCAL-00009" summary="resizeable grid&#10;numbered and lettered&#10;image pieces&#10;can move pieces in commandline">
+      <created>1581895824932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581895824932</updated>
+    </task>
+    <task id="LOCAL-00010" summary="first attempt">
+      <created>1581897039434</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581897039434</updated>
+    </task>
+    <task id="LOCAL-00011" summary="first attempt">
+      <created>1581897046511</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581897046511</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="resizeable grid" />
+    <MESSAGE value="resizeable grid&#10;numbered and lettered" />
+    <MESSAGE value="resizeable grid&#10;numbered and lettered&#10;image pieces" />
+    <MESSAGE value="resizeable grid&#10;numbered and lettered&#10;image pieces&#10;can move pieces in commandline" />
+    <MESSAGE value="first attempt" />
+    <option name="LAST_COMMIT_MESSAGE" value="first attempt" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="394" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581833612757">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="394" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1581833612757" />
+    <state x="286" y="23" key="CommitChangelistDialog2" timestamp="1581897046311">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="286" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1581895824740" />
+    <state x="286" y="23" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1581897046311" />
+    <state width="945" height="640" key="GridCell.Tab.0.bottom" timestamp="1581961788914">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1386" height="299" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581896588963" />
+    <state width="945" height="640" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1581961788914" />
+    <state width="945" height="640" key="GridCell.Tab.0.center" timestamp="1581961788913">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1386" height="299" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581896588959" />
+    <state width="945" height="640" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1581961788913" />
+    <state width="945" height="640" key="GridCell.Tab.0.left" timestamp="1581961788913">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1386" height="299" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581896588959" />
+    <state width="945" height="640" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1581961788913" />
+    <state width="945" height="640" key="GridCell.Tab.0.right" timestamp="1581961788913">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1386" height="299" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581896588961" />
+    <state width="945" height="640" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1581961788913" />
+    <state x="219" y="139" key="Vcs.Push.Dialog.v2" timestamp="1581897049533">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="219" y="126" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1581895827265" />
+    <state x="219" y="139" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1581897049533" />
+    <state x="340" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1581897002591">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="340" y="242" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1581829849016" />
+    <state x="340" y="245" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1581897002591" />
+    <state x="485" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581825205642">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="485" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1581825205642" />
+  </component>
+</project>
