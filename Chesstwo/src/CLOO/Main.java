@@ -15,10 +15,10 @@ public class Main extends JFrame {
     private boolean play;
     private int width = 800;
     private int height = 800;
-    private int rp = 21;
-    private int cp = 21;
-    private int rs = 21;
-    private int cs = 21;
+    private int xp = 21;
+    private int yp = 21;
+    private int xs = 21;
+    private int ys = 21;
     //Constructor
     public Main() {
         super("Chess");
@@ -27,9 +27,9 @@ public class Main extends JFrame {
         setVisible(true);
         setLayout(new GridLayout(8, 8));
         play = true;
-        for (int c = 0; c < grid.length; c++) {
-            for (int r = 0; r < grid[c].length; r++) {
-                grid[c][r] = new JButton();
+        for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                grid[y][x] = new JButton();
             }
         }
         addButtons();
@@ -56,39 +56,39 @@ public class Main extends JFrame {
     public void addButtons(){
         int w = this.getSize().width / 8;
         int h = this.getSize().height / 8;
-        for (int c = 0; c < grid.length; c++) {
-            for (int r = 0; r < grid[c].length; r++) {
-                grid[c][r].setSize(w, h);
-                grid[c][r].setOpaque(true);
-                grid[c][r].setBackground(Color.black);
-                grid[c][r].setIcon(new ImageIcon(this.game.getImage(c,r,w,h)));
-                int finalR = r;
-                int finalC = c;
-                grid[c][r].addMouseListener(new MouseAdapter() {
+        for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                grid[y][x].setSize(w, h);
+                grid[y][x].setOpaque(true);
+                grid[y][x].setBackground(Color.black);
+                grid[y][x].setIcon(new ImageIcon(this.game.getImage(y,x,w,h)));
+                int finalR = x;
+                int finalC = y;
+                grid[y][x].addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseReleased(MouseEvent e) {
                         boolean action = true;
-                        if(cp == 21 && rp == 21){
-                            cp = finalC;
-                            rp = finalR;
+                        if(yp == 21 && xp == 21){
+                            yp = finalC;
+                            xp = finalR;
                             System.out.println("chose piece");
                             action = false;
-                            grid[cp][rp].setBackground(Color.red);
+                            grid[yp][xp].setBackground(Color.red);
                         }
-                        if(cp != 21 && rp != 21 && action){
-                            cs = finalC;
-                            rs = finalR;
-                            game.changeData(cp,rp,cs,rs);
-                            grid[cp][rp].setIcon(new ImageIcon(game.getImage(cp,rp,w,h)));
-                            grid[cp][rp].setBackground(Color.black);
-                            grid[cs][rs].setIcon(new ImageIcon(game.getImage(cs,rs,w,h)));
+                        if(yp != 21 && xp != 21 && action){
+                            ys = finalC;
+                            xs = finalR;
+                            game.changeData(yp,xp,ys,xs);
+                            grid[yp][xp].setIcon(new ImageIcon(game.getImage(yp,xp,w,h)));
+                            grid[yp][xp].setBackground(Color.black);
+                            grid[ys][xs].setIcon(new ImageIcon(game.getImage(ys,xs,w,h)));
                             System.out.println("chose spot");
-                            cp = rp = cs = rs = 21;
+                            yp = xp = ys = xs = 21;
                             revalidate();
                         }
                     }
                 });
-                this.getContentPane().add(grid[c][r]);
+                this.getContentPane().add(grid[y][x]);
             }
         }
     }

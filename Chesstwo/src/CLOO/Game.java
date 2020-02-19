@@ -21,10 +21,10 @@ public class Game{
             {2, 3, 4, 5, 6, 4, 3, 2},
     };
     //method to make changes to data
-    public void changeData(int cp, int rp, int cs, int rs) {
-        int type = data[cp][rp];
-        data[cp][rp] = 0;
-        data[cs][rs] = type;
+    public void changeData(int yp, int xp, int ys, int xs) {
+        int type = data[yp][xp];
+        data[yp][xp] = 0;
+        data[ys][xs] = type;
     }
     //images
     private Image wk;
@@ -91,7 +91,8 @@ public class Game{
     }
     //piece rules
     /*private int[][] data = {
-               0  1  2  3  4  5  6  7
+    // y,x
+            cr 0  1  2  3  4  5  6  7
             0{-2,-3,-4,-5,-6,-4,-3,-2},
             1{-1,-1,-1,-1,-1,-1,-1,-1},
             2{ 0, 0, 0, 0, 0, 0, 0, 0},
@@ -104,6 +105,7 @@ public class Game{
     */
     public ArrayList<int[]> pawn(){
         ArrayList<int[]> output = new ArrayList<int[]>();
+
         return output;
     }
 
