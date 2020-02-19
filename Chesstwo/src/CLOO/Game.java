@@ -103,10 +103,89 @@ public class Game{
             7{ 2, 3, 4, 5, 6, 4, 3, 2},
     };
     */
-    public ArrayList<int[]> pawn(){
+    public ArrayList<int[]> pawn(int yp, int xp, boolean white){
         ArrayList<int[]> output = new ArrayList<int[]>();
-
+        if(white){
+            //two if at start
+            if (yp == 6 && data[5][xp]==0 && data[4][xp]==0){
+                int[] a = {5,xp};int[] b = {4,xp};output.add(a);output.add(b);
+            }
+            //one if not
+            if (yp != 6 && yp != 0 && data[yp-1][xp]==0){
+                int[] a = {yp-1,xp};output.add(a);
+            }
+            //diagonal to enemies
+            if (yp != 6 && yp != 0){
+                if (xp!= 0){
+                    if (data[yp-1][xp-1]!=0){
+                        int[] a = {yp-1,xp-1};output.add(a);
+                    }
+                }
+                if (xp!= 7){
+                    if (data[yp-1][xp+1]!=0){
+                        int[] b = {yp-1,xp+1};output.add(b);
+                    }
+                }
+            }
+        }
+        if(!(white)){
+            if (yp == 1 && data[2][xp]==0 && data[3][xp]==0){
+                int[] a = {2,xp};int[] b = {3,xp};
+                output.add(a);output.add(b);
+            }
+            if (yp != 1 && yp != 7 && data[yp+1][xp]==0){
+                int[] a = {yp+1,xp};
+                output.add(a);
+            }
+            if (yp != 1 && yp != 7){
+                if (xp!= 0){
+                    if (data[yp+1][xp-1]!=0){
+                        int[] a = {yp+1,xp-1};output.add(a);
+                    }
+                }
+                if (xp!= 7){
+                    if (data[yp+1][xp+1]!=0){
+                        int[] b = {yp+1,xp+1};output.add(b);
+                    }
+                }
+            }
+        }
         return output;
+    }
+    public ArrayList<int[]> checkMoves(int a, int b) {
+        if (data[a][b] == 1)
+            return pawn(a, b, true);
+        /*
+        if (data[a][b] == 2)
+            return
+        if (data[a][b] == 3)
+            return
+        if (data[a][b] == 4)
+            return
+        if (data[a][b] == 5)
+            return
+        if (data[a][b] == 6)
+            return
+         */
+        if (data[a][b] == -1)
+            return pawn(a, b, false);
+        /*
+        if (data[a][b] == -2)
+            return
+        if (data[a][b] == -3)
+            return
+        if (data[a][b] == -4)
+            return
+        if (data[a][b] == -5)
+            return
+        if (data[a][b] == -6)
+            return
+         */
+        if (data[a][b] == 0){
+            ArrayList<int[]> output = new ArrayList<int[]>();
+            int[] x = {a,b};output.add(x);return output;
+        }
+        return null;
     }
 
 }

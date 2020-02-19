@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 
 public class Main extends JFrame {
@@ -38,7 +39,6 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         Main run = new Main();
         while (run.play) { //game loop
-
             run.checkResizing();
 
         }
@@ -74,13 +74,21 @@ public class Main extends JFrame {
                             System.out.println("chose piece");
                             action = false;
                             grid[yp][xp].setBackground(Color.red);
+                            ArrayList<int[]> pmove = game.checkMoves(yp,xp);
+                            for (int[] move: pmove) {
+                                grid[move[0]][move[1]].setBackground(Color.red);
+                            }
                         }
                         if(yp != 21 && xp != 21 && action){
                             ys = finalC;
                             xs = finalR;
                             game.changeData(yp,xp,ys,xs);
                             grid[yp][xp].setIcon(new ImageIcon(game.getImage(yp,xp,w,h)));
-                            grid[yp][xp].setBackground(Color.black);
+                            for (JButton[] jButtons : grid) {
+                                for (JButton jButton : jButtons) {
+                                    jButton.setBackground(Color.black);
+                                }
+                            }
                             grid[ys][xs].setIcon(new ImageIcon(game.getImage(ys,xs,w,h)));
                             System.out.println("chose spot");
                             yp = xp = ys = xs = 21;
