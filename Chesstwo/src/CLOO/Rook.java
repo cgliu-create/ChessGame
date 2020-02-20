@@ -97,7 +97,7 @@ public class Rook implements ChessPiece {
             //up
             boolean up = true;
             int u = yp;
-            while (u>0&&up) {
+            while (u > 0 && up) {
                 u--;
                 if (y[u] < 0) {
                     vertical.add(new Point(u, xp));
@@ -121,7 +121,7 @@ public class Rook implements ChessPiece {
             //right
             boolean right = true;
             int r = xp;
-            while (r < x.length - 1 && right) {
+            while (r < 7 && right) {
                 r++;
                 if (x[r] > 0) {
                     horizontal.add(new Point(yp, r));
@@ -137,7 +137,7 @@ public class Rook implements ChessPiece {
             //left
             boolean left = true;
             int l = xp;
-            while (l>0&&left) {
+            while (l > 0 && left) {
                 l--;
                 if (x[l] > 0) {
                     horizontal.add(new Point(yp, l));
@@ -153,13 +153,13 @@ public class Rook implements ChessPiece {
             //down
             boolean down = true;
             int d = yp;
-            while (d<y.length-1&&down) {
+            while (d < 7 && down) {
                 d++;
                 if (y[d] > 0) {
-                    vertical.add(new Point(d, xp));
-                    down = false;
+                   vertical.add(new Point(d, xp));
+                   down = false;
                 }
-                if (x[d] < 0) {
+                if (y[d] < 0) {
                     down = false;
                 }
                 if (y[d] == 0) {
