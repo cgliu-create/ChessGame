@@ -98,6 +98,7 @@ public class Game{
     private Rook R = new Rook();
     private Bishop B = new Bishop();
     private  Knight N = new Knight();
+    private  Queen Q = new Queen();
 
     public ArrayList<Point> checkMoves(int a, int b) {
         if (data[a][b] == 1) {
@@ -116,12 +117,14 @@ public class Game{
             B.setData(data);
             return B.checkMoves(a, b, true);
         }
-            /*
-        if (data[a][b] == 5)
-            return
+        if (data[a][b] == 5){
+            Q.setData(data);
+            return Q.checkMoves(a, b, true);
+        }
+        /*
         if (data[a][b] == 6)
             return
-         */
+        */
         if (data[a][b] == -1){
             P.setData(data);
             return P.checkMoves(a, b, false);
@@ -138,12 +141,14 @@ public class Game{
             B.setData(data);
             return B.checkMoves(a, b, false);
         }
-            /*
-        if (data[a][b] == -5)
-            return
+        if (data[a][b] == -5){
+            Q.setData(data);
+            return Q.checkMoves(a, b, false);
+        }
+        /*
         if (data[a][b] == -6)
             return
-         */
+        */
         ArrayList<Point> output = new ArrayList<Point>();
         output.add(new Point(a,b));
         return output;

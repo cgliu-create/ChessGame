@@ -63,7 +63,7 @@ public class Bishop implements ChessPiece{
                 out.add(getData(y, x));
             }
         }
-        System.out.println(out.toString());
+        //System.out.println(out.toString());
         return out;
     }
     public ArrayList<Point> getDiagonalPoints(int yp, int xp, int onetofour ) {
@@ -98,7 +98,7 @@ public class Bishop implements ChessPiece{
                 out.add(new Point(y, x));
             }
         }
-        System.out.println(out.toString());
+        //System.out.println(out.toString());
         return out;
     }
     @Override
@@ -141,7 +141,7 @@ public class Bishop implements ChessPiece{
                     output.add(DPdown.get(b));
                     downp = false;
                 }
-                if (Pup.get(b)>0){
+                if (Pdown.get(b)>0){
                     downp = false;
                 }
                 b++;
