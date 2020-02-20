@@ -96,6 +96,7 @@ public class Game{
     //BK=-6,BQ=-5,BB=-4,BN=-3,BR=-2,BP=-1
     private Pawn P = new Pawn();
     private Rook R = new Rook();
+    private Bishop B = new Bishop();
 
     public ArrayList<Point> checkMoves(int a, int b) {
         if (data[a][b] == 1) {
@@ -109,8 +110,12 @@ public class Game{
         /*
         if (data[a][b] == 3)
             return
-        if (data[a][b] == 4)
-            return
+        */
+        if (data[a][b] == 4){
+            B.setData(data);
+            return B.checkMoves(a, b, true);
+        }
+            /*
         if (data[a][b] == 5)
             return
         if (data[a][b] == 6)
@@ -127,8 +132,12 @@ public class Game{
         /*
         if (data[a][b] == -3)
             return
-        if (data[a][b] == -4)
-            return
+            */
+        if (data[a][b] == -4){
+            B.setData(data);
+            return B.checkMoves(a, b, false);
+        }
+            /*
         if (data[a][b] == -5)
             return
         if (data[a][b] == -6)
