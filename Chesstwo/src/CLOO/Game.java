@@ -97,6 +97,7 @@ public class Game{
     private Pawn P = new Pawn();
     private Rook R = new Rook();
     private Bishop B = new Bishop();
+    private  Knight N = new Knight();
 
     public ArrayList<Point> checkMoves(int a, int b) {
         if (data[a][b] == 1) {
@@ -107,10 +108,10 @@ public class Game{
             R.setData(data);
             return R.checkMoves(a, b, true);
         }
-        /*
-        if (data[a][b] == 3)
-            return
-        */
+        if (data[a][b] == 3) {
+            N.setData(data);
+            return N.checkMoves(a, b, true);
+        }
         if (data[a][b] == 4){
             B.setData(data);
             return B.checkMoves(a, b, true);
@@ -129,10 +130,10 @@ public class Game{
             R.setData(data);
             return R.checkMoves(a, b, false);
         }
-        /*
-        if (data[a][b] == -3)
-            return
-            */
+        if (data[a][b] == -3) {
+            N.setData(data);
+            return N.checkMoves(a, b, false);
+        }
         if (data[a][b] == -4){
             B.setData(data);
             return B.checkMoves(a, b, false);
