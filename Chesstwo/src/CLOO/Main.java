@@ -20,6 +20,8 @@ public class Main extends JFrame {
     private int yp = 21;
     private int xs = 21;
     private int ys = 21;
+    int w = this.getSize().width / 8-6;
+    int h = this.getSize().height / 8-6;
     private ArrayList<Point> pmove = new ArrayList<Point>();
     //Constructor
     public Main() {
@@ -43,17 +45,26 @@ public class Main extends JFrame {
     }
     //resize frame
     public void checkResizing() {
-        int w = this.getSize().width;
-        int h = this.getSize().height;
-        if (this.width != w || this.height != h) {
-            this.width = w;
-            this.height = h;
+        int wg = this.getSize().width;
+        int hg = this.getSize().height;
+        if (this.width != wg || this.height != hg) {
+            this.width = wg;
+            this.height = hg;
+            w = this.getSize().width / 8-6;
+            h = this.getSize().height / 8-6;
+            setButtonsSize();
             this.revalidate();
         }
     }
+    public void setButtonsSize() {
+        for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                grid[y][x].setSize(w, h);
+                grid[y][x].setIcon(new ImageIcon(game.getImage(y,x,w,h)));
+            }
+        }
+    }
     public void addButtons(){
-        int w = this.getSize().width / 8;
-        int h = this.getSize().height / 8;
         for (int y = 0; y < grid.length; y++) {
             for (int x = 0; x < grid[y].length; x++) {
                 grid[y][x].setSize(w, h);

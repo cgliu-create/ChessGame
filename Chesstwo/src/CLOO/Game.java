@@ -19,7 +19,7 @@ public class Game{
             {0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
             {1, 1, 1, 1, 1, 1, 1, 1},
-            {2, 3, 4, 5, 6, 4, 3, 2},
+            {2, 3, 4, 5, 6, 4, 3, 2}
     };
     //method to make changes to data
     public void changeData(int yp, int xp, int ys, int xs) {
@@ -44,6 +44,19 @@ public class Game{
     private Image bn;
     private Image bp;
     private Image empty;
+    private Image gwk;
+    private Image gwq;
+    private Image gwb;
+    private Image gwr;
+    private Image gwn;
+    private Image gwp;
+    private Image gbk;
+    private Image gbq;
+    private Image gbb;
+    private Image gbr;
+    private Image gbn;
+    private Image gbp;
+    private Image gray;
     //constructor
     public Game() {
         try {//https://stackoverflow.com/questions/9864267/loading-image-resource/9866659#9866659
@@ -60,37 +73,114 @@ public class Game{
             bn = ImageIO.read(getClass().getResource("/ChessP/BN.png"));
             bp = ImageIO.read(getClass().getResource("/ChessP/BP.png"));
             empty = ImageIO.read(getClass().getResource("/ChessP/empty.png"));
+            gwk = ImageIO.read(getClass().getResource("/ChessP/WKG.png"));
+            gwq = ImageIO.read(getClass().getResource("/ChessP/WQG.png"));
+            gwb = ImageIO.read(getClass().getResource("/ChessP/WBG.png"));
+            gwr = ImageIO.read(getClass().getResource("/ChessP/WRG.png"));
+            gwn = ImageIO.read(getClass().getResource("/ChessP/WNG.png"));
+            gwp = ImageIO.read(getClass().getResource("/ChessP/WPG.png"));
+            gbk = ImageIO.read(getClass().getResource("/ChessP/BKG.png"));
+            gbq = ImageIO.read(getClass().getResource("/ChessP/BQG.png"));
+            gbb = ImageIO.read(getClass().getResource("/ChessP/BBG.png"));
+            gbr = ImageIO.read(getClass().getResource("/ChessP/BRG.png"));
+            gbn = ImageIO.read(getClass().getResource("/ChessP/BNG.png"));
+            gbp = ImageIO.read(getClass().getResource("/ChessP/BPG.png"));
+            gray = ImageIO.read(getClass().getResource("/ChessP/gray.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    private int[][] tiles = {
+            {1, 0, 1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 1, 0, 1, 0, 1},
+            {1, 0, 1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 1, 0, 1, 0, 1},
+            {1, 0, 1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 1, 0, 1, 0, 1},
+            {1, 0, 1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 1, 0, 1, 0, 1}
+    };
     public Image getImage(int a, int b, int w, int h) {
-        if (data[a][b] == 1)
-            return wp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 2)
-            return wr.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 3)
-            return wn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 4)
-            return wb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 5)
-            return wq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 6)
-            return wk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -1)
-            return bp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -2)
-            return br.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -3)
-            return bn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -4)
-            return bb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -5)
-            return bq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == -6)
-            return bk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
-        if (data[a][b] == 0)
-            return empty.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        if (data[a][b] == 1){
+            if(tiles[a][b] == 0)
+                return wp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+
+        if (data[a][b] == 2){
+            if(tiles[a][b] == 0)
+                return wr.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwr.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == 3){
+            if(tiles[a][b] == 0)
+                return wn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == 4){
+            if(tiles[a][b] == 0)
+                return wb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == 5){
+            if(tiles[a][b] == 0)
+                return wq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+
+        if (data[a][b] == 6){
+            if(tiles[a][b] == 0)
+                return wk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gwk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -1){
+            if(tiles[a][b] == 0)
+                return bp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbp.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -2){
+            if(tiles[a][b] == 0)
+                return br.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbr.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -3){
+            if(tiles[a][b] == 0)
+                return bn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbn.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -4){
+            if(tiles[a][b] == 0)
+                return bb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbb.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -5){
+            if(tiles[a][b] == 0)
+                return bq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbq.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == -6){
+            if(tiles[a][b] == 0)
+                return bk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gbk.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
+        if (data[a][b] == 0){
+            if(tiles[a][b] == 0)
+                return empty.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            if(tiles[a][b] == 1)
+                return gray.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+        }
         return null;
     }
     //WK=6,WQ=5,WB=4,WN=3,WR=2,WP=1
