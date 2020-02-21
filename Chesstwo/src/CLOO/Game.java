@@ -99,6 +99,7 @@ public class Game{
     private Bishop B = new Bishop();
     private  Knight N = new Knight();
     private  Queen Q = new Queen();
+    private  King K = new King();
 
     public ArrayList<Point> checkMoves(int a, int b) {
         if (data[a][b] == 1) {
@@ -121,10 +122,10 @@ public class Game{
             Q.setData(data);
             return Q.checkMoves(a, b, true);
         }
-        /*
-        if (data[a][b] == 6)
-            return
-        */
+        if (data[a][b] == 6){
+            K.setData(data);
+            return K.checkMoves(a, b, true);
+        }
         if (data[a][b] == -1){
             P.setData(data);
             return P.checkMoves(a, b, false);
@@ -145,10 +146,10 @@ public class Game{
             Q.setData(data);
             return Q.checkMoves(a, b, false);
         }
-        /*
-        if (data[a][b] == -6)
-            return
-        */
+        if (data[a][b] == -6){
+            K.setData(data);
+            return K.checkMoves(a, b, false);
+        }
         ArrayList<Point> output = new ArrayList<Point>();
         output.add(new Point(a,b));
         return output;
