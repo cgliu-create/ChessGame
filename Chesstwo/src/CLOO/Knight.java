@@ -4,7 +4,7 @@ package CLOO;
 import java.util.ArrayList;
 
 public class Knight implements ChessPiece {
-    ArrayList<Point> output = new ArrayList<Point>();
+    ArrayList<Point> output = new ArrayList<>();
     private int[][] data = {
             {-2, -3, -4, -5, -6, -4, -3, -2},
             {-1, -1, -1, -1, -1, -1, -1, -1},

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Bishop implements ChessPiece{
-    ArrayList<Point> output = new ArrayList<Point>();
+    ArrayList<Point> output = new ArrayList<>();
     private int[][] data = {
             {-2, -3, -4, -5, -6, -4, -3, -2},
             {-1, -1, -1, -1, -1, -1, -1, -1},
@@ -33,7 +33,7 @@ public class Bishop implements ChessPiece{
         return data[yp][xp];
     }
     public ArrayList<Integer> getDiagonalData(int yp, int xp, int onetofour ) {
-        ArrayList<Integer> out = new ArrayList<Integer>();
+        ArrayList<Integer> out = new ArrayList<>();
         int y = yp;
         int x = xp;
         if(onetofour == 1){
@@ -68,7 +68,7 @@ public class Bishop implements ChessPiece{
         return out;
     }
     public ArrayList<Point> getDiagonalPoints(int yp, int xp, int onetofour ) {
-        ArrayList<Point> out = new ArrayList<Point>();
+        ArrayList<Point> out = new ArrayList<>();
         int y = yp;
         int x = xp;
         if(onetofour == 1){

@@ -2,7 +2,6 @@
 package CLOO;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -241,7 +240,7 @@ public class Game{
             K.setData(data);
             return K.checkMoves(a, b, false);
         }
-        ArrayList<Point> output = new ArrayList<Point>();
+        ArrayList<Point> output = new ArrayList<>();
         output.add(new Point(a,b));
         return output;
     }

@@ -3,8 +3,6 @@ package CLOO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -22,7 +20,7 @@ public class Main extends JFrame {
     private int ys = 21;
     int w = this.getSize().width / 8-6;
     int h = this.getSize().height / 8-6;
-    private ArrayList<Point> pmove = new ArrayList<Point>();
+    private ArrayList<Point> pmove = new ArrayList<>();
     //Constructor
     public Main() {
         super("Chess");
@@ -122,6 +120,13 @@ public class Main extends JFrame {
                 this.getContentPane().add(grid[y][x]);
             }
         }
+    }
+    //how??/?
+    public boolean isCheck(){
+        return false;
+    }
+    public boolean isCheckMate(){
+        return false;
     }
 }
 

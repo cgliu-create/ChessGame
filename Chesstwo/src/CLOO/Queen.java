@@ -4,7 +4,7 @@ package CLOO;
 import java.util.ArrayList;
 
 public class Queen implements ChessPiece{
-    ArrayList<Point> output = new ArrayList<Point>();
+    ArrayList<Point> output = new ArrayList<>();
     Bishop d = new Bishop();
     Rook hv = new Rook();
     public Queen(){

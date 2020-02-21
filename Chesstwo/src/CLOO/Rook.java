@@ -4,7 +4,7 @@ package CLOO;
 import java.util.ArrayList;
 
 public class Rook implements ChessPiece {
-    ArrayList<Point> output = new ArrayList<Point>();
+    ArrayList<Point> output = new ArrayList<>();
     private int[][] data = {
             {-2, -3, -4, -5, -6, -4, -3, -2},
             {-1, -1, -1, -1, -1, -1, -1, -1},
@@ -34,8 +34,8 @@ public class Rook implements ChessPiece {
     @Override
     public ArrayList<Point> checkMoves(int yp, int xp, boolean white) {
         output.add(new Point(yp,xp));
-        ArrayList<Point> vertical = new ArrayList<Point>();
-        ArrayList<Point> horizontal = new ArrayList<Point>();
+        ArrayList<Point> vertical = new ArrayList<>();
+        ArrayList<Point> horizontal = new ArrayList<>();
         //horizontal data
         int[] x = new int[8];
         for (int i = 0; i < x.length; i++) {
