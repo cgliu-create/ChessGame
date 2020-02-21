@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class Main extends JFrame {
     private Game game = new Game();
     private JButton[][] grid = new JButton[8][8];
-    private boolean play;
     private int width = 800;
     private int height = 800;
     private int xp = 21;
@@ -28,7 +27,6 @@ public class Main extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setLayout(new GridLayout(8, 8));
-        play = true;
         for (int y = 0; y < grid.length; y++) {
             for (int x = 0; x < grid[y].length; x++) {
                 grid[y][x] = new JButton();
@@ -39,7 +37,7 @@ public class Main extends JFrame {
     }
     //test
     public static void main(String[] args) {
-        Main run = new Main();
+        new Main();
     }
     //resize frame
     public void checkResizing() {
@@ -94,8 +92,10 @@ public class Main extends JFrame {
                             xs = finalX;
                             boolean yes = false;
                             for (Point move: pmove) {
-                                if(move.getY() == ys && move.getX() == xs)
+                                if (move.getY() == ys && move.getX() == xs) {
                                     yes = true;
+                                    break;
+                                }
                             }
                             if(yes) {
                                 game.changeData(yp, xp, ys, xs);
@@ -120,13 +120,6 @@ public class Main extends JFrame {
                 this.getContentPane().add(grid[y][x]);
             }
         }
-    }
-    //how??/?
-    public boolean isCheck(){
-        return false;
-    }
-    public boolean isCheckMate(){
-        return false;
     }
 }
 

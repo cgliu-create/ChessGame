@@ -20,9 +20,7 @@ public class Knight implements ChessPiece {
     @Override
     public void setData(int[][] input) {
         for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data[i].length; j++) {
-                data[i][j] = input[i][j];
-            }
+            System.arraycopy(input[i], 0, data[i], 0, data[i].length);
         }
         output.clear();
     }

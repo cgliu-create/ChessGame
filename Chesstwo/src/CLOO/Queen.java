@@ -25,12 +25,8 @@ public class Queen implements ChessPiece{
     public ArrayList<Point> checkMoves(int yp, int xp, boolean white) {
         ArrayList<Point> dp = d.checkMoves(yp, xp, white);
         ArrayList<Point> hvp = hv.checkMoves(yp, xp, white);
-        for (Point p: dp) {
-            output.add(p);
-        }
-        for (Point p: hvp) {
-            output.add(p);
-        }
+        output.addAll(dp);
+        output.addAll(hvp);
         return output;
     }
 }

@@ -20,9 +20,7 @@ public class Rook implements ChessPiece {
     @Override
     public void setData(int[][] input) {
         for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data[i].length; j++) {
-                data[i][j] = input[i][j];
-            }
+            System.arraycopy(input[i], 0, data[i], 0, data[i].length);
         }
         output.clear();
     }
@@ -111,12 +109,8 @@ public class Rook implements ChessPiece {
                     vertical.add(new Point(u, xp));
                 }
             }
-            for(Point h: horizontal){
-                output.add(h);
-            }
-            for(Point v: vertical){
-                output.add(v);
-            }
+            output.addAll(horizontal);
+            output.addAll(vertical);
         }
         if (!(white)) {
             //right
@@ -183,12 +177,8 @@ public class Rook implements ChessPiece {
                     vertical.add(new Point(u, xp));
                 }
             }
-            for(Point h: horizontal){
-                output.add(h);
-            }
-            for(Point v: vertical){
-                output.add(v);
-            }
+            output.addAll(horizontal);
+            output.addAll(vertical);
         }
         return output;
     }
