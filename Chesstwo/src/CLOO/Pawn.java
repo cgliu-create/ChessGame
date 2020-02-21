@@ -38,18 +38,18 @@ public class Pawn implements  ChessPiece{
                 output.add(new Point(5,xp));output.add(new Point(4,xp));
             }
             //one if not
-            if (yp != 6 && yp != 0 && data[yp-1][xp]==0){
+            if ( yp != 0 && data[yp-1][xp]==0){
                 output.add(new Point(yp-1,xp));
             }
             //diagonal to enemies
-            if (yp != 6 && yp != 0){
+            if ( yp != 0){
                 if (xp!= 0){
-                    if (data[yp-1][xp-1]!=0){
+                    if (data[yp-1][xp-1]<0){
                         output.add(new Point(yp-1,xp-1));
                     }
                 }
                 if (xp!= 7){
-                    if (data[yp-1][xp+1]!=0){
+                    if (data[yp-1][xp+1]<0){
                         output.add(new Point(yp-1,xp+1));
                     }
                 }
@@ -59,17 +59,17 @@ public class Pawn implements  ChessPiece{
             if (yp == 1 && data[2][xp]==0 && data[3][xp]==0){
                 output.add(new Point(2,xp));output.add(new Point(3,xp));
             }
-            if (yp != 1 && yp != 7 && data[yp+1][xp]==0){
+            if ( yp != 7 && data[yp+1][xp]==0){
                 output.add(new Point(yp+1,xp));
             }
-            if (yp != 1 && yp != 7){
+            if ( yp != 7){
                 if (xp!= 0){
-                    if (data[yp+1][xp-1]!=0){
+                    if (data[yp+1][xp-1]>0){
                         output.add(new Point(yp+1,xp-1));
                     }
                 }
                 if (xp!= 7){
-                    if (data[yp+1][xp+1]!=0){
+                    if (data[yp+1][xp+1]>0){
                         output.add(new Point(yp+1,xp+1));
                     }
                 }

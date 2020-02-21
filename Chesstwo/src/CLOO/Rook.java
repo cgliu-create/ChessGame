@@ -156,8 +156,8 @@ public class Rook implements ChessPiece {
             while (d < 7 && down) {
                 d++;
                 if (y[d] > 0) {
-                   vertical.add(new Point(d, xp));
-                   down = false;
+                    down = false;
+                    vertical.add(new Point(d, xp));
                 }
                 if (y[d] < 0) {
                     down = false;
