@@ -87,7 +87,7 @@ public class Rook implements ChessPiece {
                     vertical.add(new Point(d, xp));
                     down = false;
                 }
-                if (x[d] > 0) {
+                if (y[d] > 0) {
                     down = false;
                 }
                 if (y[d] == 0) {
