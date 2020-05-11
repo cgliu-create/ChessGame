@@ -1,3 +1,3 @@
 # ChessGame
-- Need to add a player turn system
-- Need to add a way to check for checkmates
+- Simple gui with JButtons and images
+- Simple Chess AI
